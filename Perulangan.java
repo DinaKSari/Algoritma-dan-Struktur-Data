@@ -2,10 +2,10 @@
 import java.util.Scanner;
 public class Perulangan {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n, nim;
+        Scanner dina11 = new Scanner(System.in);
+        double n, nim;
         System.out.println("Masukan NIM = ");
-        nim = sc.nextInt();
+        nim = dina11.nextDouble();
         n = nim % 100;
         if(n<10){
             n+=10;
