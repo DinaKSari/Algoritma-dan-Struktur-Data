@@ -31,6 +31,24 @@ public class Array {
             }
         }
         System.out.println("=====================================");
+        
+        int sks[] = new int[matkul.length];
+        double totalBobotSKS = 0;
+        int totalSKS = 0;
+
+        for (int i = 0; i < matkul.length; i++) {
+        System.out.print("Masukkan bobot SKS untuk matkul " + matkul[i] + ": ");
+        sks[i] = sc.nextInt();
+
+        totalBobotSKS += nilaiSetara[i] * sks[i];
+        totalSKS += sks[i];
+        }
+
+        double ipSemester = totalBobotSKS / totalSKS;
+
+        System.out.println("\n===============================================");
+        System.out.println("IP Semester: " + String.format("%.2f", ipSemester));
+        
         for(int i=0;i<title.length;i++){
             System.out.print(title[i] + " | ");
         }
@@ -42,6 +60,5 @@ public class Array {
             }
             System.out.println();
         }
-        double ipSemester = 
     }
 }
