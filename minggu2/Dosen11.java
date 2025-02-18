@@ -38,7 +38,7 @@ public class Dosen11 {
             statusAktif = setStatus;
             System.out.println("Status dosen telah diubah!");
         }
-        if(statusAktif == true){
+        else if(statusAktif == true){
             System.out.println("Dosen aktif");
         } else{
             System.out.println("Dosen tidak aktif");
