@@ -19,5 +19,6 @@ public class MahasiswaMain11 {
 
         Mahasiswa11 DinaKumalaSari = new Mahasiswa11("Dina Kumala Sari","244107020072",3.56,"TI 1A");
         DinaKumalaSari.tampilkanInformasi();
+        DinaKumalaSari.nilaiKinerja();
     }
 }
