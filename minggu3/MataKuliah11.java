@@ -10,4 +10,14 @@ public class MataKuliah11 {
         this.sks = sks;
         this.jumlahJam = jumlahJam;
         }
+    public void cetakInfo(){
+        for(int i=0; i < 3; i++) {
+            System.out.println("Data Mata Kuliah ke-" + (i+1));
+            System.out.println("Kode : "+ kode);
+            System.out.println("Nama : "+ nama);
+            System.out.println("Sks : "+ sks);
+            System.out.println("Jumlah Jam : "+ jumlahJam);
+            System.out.println("---");
+            }
+    }
 }
