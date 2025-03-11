@@ -1,8 +1,8 @@
+//dina kumala sari 1A absen 11
 public class MainNilaiMahasiswa11 {
     public static void main(String[] args) {
         int jumlahMahasiswa = 7; 
         NilaiMahasiswa11 nm = new NilaiMahasiswa11(jumlahMahasiswa);
-        
         String[] nama = {"Ahmad", "Budi", "Cindy", "Dian", "Eko", "Fajar", "Gina"};
         String[] nim = {"220101001", "220101002", "220101003", "220101004", "220101005", "220101006", "220101007"};
         int[] tahun = {2022, 2022, 2021, 2021, 2023, 2020, 2023};

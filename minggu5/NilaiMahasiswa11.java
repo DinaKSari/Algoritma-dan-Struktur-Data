@@ -1,10 +1,6 @@
-public class NilaiMahasiswa11 {
-    String[] namaMahasiswa;
-    String[] nim;
-    int[] tahunMasuk;
-    int[] nilaiUTS;
-    int[] nilaiUAS;
+//dina kumala sari 1A absen 11
 
+public class NilaiMahasiswa11 {
     NilaiMahasiswa11(int jumlah) {
         namaMahasiswa = new String[jumlah];
         nim = new String[jumlah];
@@ -12,6 +8,12 @@ public class NilaiMahasiswa11 {
         nilaiUTS = new int[jumlah];
         nilaiUAS = new int[jumlah];
     }
+
+    String[] namaMahasiswa;
+    String[] nim;
+    int[] tahunMasuk;
+    int[] nilaiUTS;
+    int[] nilaiUAS;
 
     // tabel
     void tabel(){
@@ -22,7 +24,7 @@ public class NilaiMahasiswa11 {
         }
     }
     
-    // cari nilai UTS tertinggi gunakan Divide and Conquer
+    // Mencari nilai UTS tertinggi
     int cariMaksDC(int[] arr, int l, int r) {
         if (l == r) {
             return arr[l];
@@ -33,7 +35,7 @@ public class NilaiMahasiswa11 {
         return Math.max(leftMax, rightMax);
     }
 
-    // Mencari nilai UTS terendah gunakan Divide and Conquer
+    // Mencari nilai UTS terendah
     int cariMinDC(int[] arr, int l, int r) {
         if (l == r) {
             return arr[l];
@@ -44,7 +46,7 @@ public class NilaiMahasiswa11 {
         return Math.min(leftMin, rightMin);
     }
 
-    // Menghitung rerata nilai UAS menggunakan Brute Force
+    // Menghitung rerata nilai UAS
     double hitungRataUAS() {
         double total = 0;
         for (int i = 0; i < nilaiUAS.length; i++) {
