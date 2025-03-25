@@ -96,8 +96,41 @@ public class MahasiswaBerprestasi11 {
         System.out.println("ipk\t: "+x);
         }
         else {
-            System.out.println("Data mahasiswa dengan IPK" + x + "tidak ditemukan");
+        System.out.println("Data mahasiswa dengan IPK " + x + " tidak ditemukan");
+        }
+    }
+
+    int findBinarySearch(double cari2, int left, int right) {
+        int mid;
+        if (right>=left){
+            mid =(left+right)/2;
+            if (cari2 ==listMhs[mid].ipk) {
+            return (mid);
+            }
+            else if (listMhs[mid].ipk>cari2) {
+            return findBinarySearch(cari2, left, mid-1);
+            }
+            else{
+            return findBinarySearch(cari2, mid+1, right);
             }
         }
+        return -1;
+    }
 
+    int findBinarySearchDesc(double cari2, int left, int right) {
+        int mid;
+        if (right>=left){
+            mid =(left+right)/2;
+            if (cari2 ==listMhs[mid].ipk) {
+            return (mid);
+            }
+            else if (listMhs[mid].ipk<cari2) {
+            return findBinarySearchDesc(cari2, left, mid-1);
+            }
+            else{
+            return findBinarySearchDesc(cari2, mid+1, right);
+            }
+        }
+        return -1;
+    }
 }
