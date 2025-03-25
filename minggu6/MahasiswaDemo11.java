@@ -1,6 +1,9 @@
+import java.util.Scanner;
 public class MahasiswaDemo11 {
     public static void main(String[] args) {
+        Scanner dina11 = new Scanner(System.in);
         MahasiswaBerprestasi11 list = new MahasiswaBerprestasi11();
+        int jumMahasiswa =5;
         Mahasiswa11 m1 = new Mahasiswa11 ( "123", "Zidan","2A", 3.2);
         Mahasiswa11 m2 = new Mahasiswa11 ( "124", "Ayu", "2A", 3.5);
         Mahasiswa11 m3 = new Mahasiswa11 ( "125", "Sofi","2A", 3.1);
@@ -31,5 +34,19 @@ public class MahasiswaDemo11 {
         System.out.println("Data yang sudah terurut menggunakan INSERTION SORT (DESC)");
         list.insertionSortDescending();
         list.tampil();
+
+        //praktikum 1 - 7.2.1
+        list.tampil();
+        System.out.println("");
+        System.out.println( "Pencarian data");
+        System.out.println("---.. -");
+        System.out.println("masukkan ipk mahasiswa yang dicari: ");
+        System.out.print( "IPK: ");
+        double cari = dina11.nextDouble();
+        System.out.println("menggunakan sequential searching");
+        double posisi=list.sequentialSearching(cari);
+        int pss= (int)posisi;
+        list.tampilPosisi(cari, pss);
+        list.tampilDataSearch(cari, pss);
     }
 }
