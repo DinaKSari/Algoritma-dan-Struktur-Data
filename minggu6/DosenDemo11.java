@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class DosenDemo11 {
     public static void main(String[] args) {
         Scanner dina11 = new Scanner(System.in);
@@ -11,7 +12,9 @@ public class DosenDemo11 {
             System.out.println("2. Tampilkan Data Dosen");
             System.out.println("3. Sorting ASC (Termuda ke Tertua)");
             System.out.println("4. Sorting DSC (Tertua ke Termuda)");
-            System.out.println("5. Keluar");
+            System.out.println("5. Cari Dosen Berdasarkan Nama (Sequential Search)");
+            System.out.println("6. Cari Dosen Berdasarkan Usia (Binary Search)");
+            System.out.println("7. Keluar");
             System.out.print("Pilih menu: ");
             pilihan = dina11.nextInt();
             dina11.nextLine();
@@ -55,7 +58,7 @@ public class DosenDemo11 {
                     System.out.println("2. Insertion Sort");
                     System.out.print("Pilihan: ");
                     int metodeSort = dina11.nextInt();
-
+                    
                     if (metodeSort == 1) {
                         dataDosen.sortingDSC();
                     } else if (metodeSort == 2) {
@@ -66,15 +69,29 @@ public class DosenDemo11 {
                     }
                     dataDosen.tampil();
                     break;
-
+                
                 case 5:
+                    System.out.print("Masukkan nama dosen yang dicari: ");
+                    String cariNama = dina11.nextLine();
+                    dataDosen.pencarianDataSequential(cariNama);
+                    break;
+
+                case 6:
+                    System.out.print("Masukkan usia yang dicari: ");
+                    int cariUsia = dina11.nextInt();
+                    dataDosen.sortingASC(); 
+                    dataDosen.pencarianDataBinary(cariUsia, pilihan, pilihan);
+                    dataDosen.tampilHasilPencarianUsia(cariUsia);
+                    break;
+
+                case 7:
                     System.out.println("Keluar dari program...");
                     break;
 
                 default:
                     System.out.println("Pilihan tidak valid! Silakan coba lagi.");
             }
-        } while (pilihan != 5);
+        } while (pilihan != 7);
 
         dina11.close();
     }
