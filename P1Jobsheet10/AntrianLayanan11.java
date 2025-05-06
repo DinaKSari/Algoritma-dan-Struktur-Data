@@ -87,4 +87,15 @@ public class AntrianLayanan11 {
     public int getJumlahAntrian() {
         return size;
         }
+    // Soal praktikum 2.2
+    public void lihatAkhir() {
+        if (IsEmpty()) {
+            System.out.println("Antrian kosong.");
+        } else {
+            System.out.print("Mahasiswa paling belakang: ");
+            System.out.println("NIM - NAMA - PRODI - KELAS");
+            data[rear].tampilkanData();
+        }
+    }
+        
 }
