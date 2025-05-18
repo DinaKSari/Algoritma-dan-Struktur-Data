@@ -41,4 +41,20 @@ public class SingleLinkedList11 {
         tail = ndInput;
         }
     }
+
+    public void insertAfter (String key, Mahasiswa11 input) {
+        Node11 ndInput = new Node11 (input, null);
+        Node11 temp = head;
+        do {
+        if (temp.data.nama.equalsIgnoreCase (key)) {
+        ndInput.next = temp.next;
+        temp.next = ndInput;
+        if (ndInput.next == null) {
+        tail = ndInput;
+        }
+        break;
+        }
+        temp = temp.next;
+        } while (temp != null);
+    }
 }
