@@ -19,4 +19,15 @@ public class SingleLinkedList11 {
         System.out.println( "Linked list kosong");
         }
     }
+
+    public void addFirst (Mahasiswa11 input) {
+        Node11 ndInput = new Node11 (input, null);
+        if (isEmpty()) {
+        head = ndInput;
+        tail = ndInput;
+        } else {
+        ndInput.next = head;
+        head = ndInput;
+        }
+    }
 }
