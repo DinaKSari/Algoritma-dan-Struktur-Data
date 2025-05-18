@@ -33,6 +33,18 @@ public class SLLMain11 {
 
         System.out.println("\nData seluruh mahasiswa dalam linked list:");
         sll.print();
+
+        //praktikum 2
+        System.out.println("data index 1: ");
+        sll.getData(1);
+        System.out.println("data mahasiswa an Bimon berada pada index: " + sll.indexOf("bimon"));
+        System.out.println();
+        sll.removeFirst();
+        sll.removeLast();
+        sll.print();
+        sll.removeAt(0);
+        sll.print();
+        
         /* ini kode sebelum modif agar bisa input pakai keyboard
         sll.print();
         sll.addFirst(mhs4);
