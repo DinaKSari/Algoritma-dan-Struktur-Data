@@ -57,4 +57,21 @@ public class SingleLinkedList11 {
         temp = temp.next;
         } while (temp != null);
     }
+
+    public void insertAt(int index, Mahasiswa11 input) {
+        if (index < 0) {
+        System.out.println("indeks salah");
+        } else if (index == 0) {
+        addFirst(input);
+        } else {
+        Node11 temp = head;
+        for (int i = 0; i < index - 1; i++) {
+        temp = temp.next;
+        }
+        temp.next = new Node11(input, temp.next);
+        if (temp.next.next == null) {
+        tail = temp.next;
+        }
+        }
+    }
 }
