@@ -30,4 +30,15 @@ public class SingleLinkedList11 {
         head = ndInput;
         }
     }
+
+    public void addLast(Mahasiswa11 input) {
+        Node11 ndInput = new Node11 (input, null);
+        if (isEmpty()) {
+        head = ndInput;
+        tail = ndInput;
+        } else {
+        tail.next = ndInput;
+        tail = ndInput;
+        }
+    }
 }
