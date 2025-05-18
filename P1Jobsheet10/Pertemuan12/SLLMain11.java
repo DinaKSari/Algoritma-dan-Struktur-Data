@@ -11,7 +11,7 @@ public class SLLMain11 {
         sll.print();
         sll.addLast(mhs1);
         sll.print();
-        sll.insertAfter ( "Dirga", mhs3);
+        sll.insertAfter ( "Caulus", mhs3);
         sll.insertAt( 2, mhs2);
         sll.print();
     }    

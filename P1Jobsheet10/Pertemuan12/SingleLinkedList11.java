@@ -10,6 +10,7 @@ public class SingleLinkedList11 {
         if (!isEmpty()) {
         Node11 tmp = head;
         System.out.print( "Isi Linked List:\t");
+        System.out.println();
         while (tmp != null) {
         tmp.data.tampilInformasi();
         tmp = tmp.next;
