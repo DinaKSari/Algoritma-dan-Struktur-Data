@@ -12,4 +12,8 @@ public class Mahasiswa11 {
         this.prodi = prodi;
         this.kelas = kelas;
     }
+
+    void tampilkanData() {
+        System.out.printf("%-10s %-15s %-10s %-5s\n", nim, nama, prodi, kelas);
+    }
 }
