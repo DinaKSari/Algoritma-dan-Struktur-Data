@@ -1,5 +1,3 @@
-package TugasPertemuan12;
-
 public class Mahasiswa11 {
     String nim;
     String nama;
