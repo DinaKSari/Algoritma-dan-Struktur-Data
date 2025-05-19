@@ -50,7 +50,7 @@ public class QueueLinkedList11 {
             System.out.println("Antrian kosong.");
         } else {
             System.out.println("Mahasiswa terdepan:");
-            System.out.println("NIM - NAMA - PRODI - KELAS");
+            System.out.printf("%-10s %-15s %-10s %-5s\n", "NIM", "NAMA", "PRODI", "KELAS");
             front.data.tampilkanData();
         }
     }
@@ -60,7 +60,7 @@ public class QueueLinkedList11 {
             System.out.println("Antrian kosong.");
         } else {
             System.out.println("Mahasiswa paling belakang:");
-            System.out.println("NIM - NAMA - PRODI - KELAS");
+            System.out.printf("%-10s %-15s %-10s %-5s\n", "NIM", "NAMA", "PRODI", "KELAS");
             rear.data.tampilkanData();
         }
     }
@@ -71,7 +71,7 @@ public class QueueLinkedList11 {
             return;
         }
         System.out.println("Daftar Mahasiswa dalam Antrian:");
-        System.out.println("NIM - NAMA - PRODI - KELAS");
+        System.out.printf("%-10s %-15s %-10s %-5s\n", "NIM", "NAMA", "PRODI", "KELAS");
         Node11 temp = front;
         int i = 1;
         while (temp != null) {
