@@ -18,17 +18,47 @@ public class AntrianUnitKemahasiswaan11 {
             System.out.print("Pilih menu: ");
             pilihan = dina11.nextInt(); dina11.nextLine();
 
-            switch (pilihan){
-            case 1:
-            case 2:
-            case 3:
-            case 4:
-            case 5:
-            case 6:
-            case 7:
-            case 0:
-            default:
-        }
+            switch (pilihan) {
+                case 1:
+                    System.out.print("NIM: ");
+                    String nim = dina11.nextLine();
+                    System.out.print("Nama: ");
+                    String nama = dina11.nextLine();
+                    System.out.print("Prodi: ");
+                    String prodi = dina11.nextLine();
+                    System.out.print("Kelas: ");
+                    String kelas = dina11.nextLine();
+                    Mahasiswa11 mhs = new Mahasiswa11(nim, nama, prodi, kelas);
+                    queue.enqueue(mhs);
+                    break;
+                case 2:
+                    Mahasiswa11 dilayani = queue.dequeue();
+                    if (dilayani != null) {
+                        System.out.print("Melayani mahasiswa: ");
+                        dilayani.tampilkanData();
+                    }
+                    break;
+                case 3:
+                    queue.lihatTerdepan();
+                    break;
+                case 4:
+                    queue.lihatBelakang();
+                    break;
+                case 5:
+                    queue.tampilkanAntrian();
+                    break;
+                case 6:
+                    System.out.println("Jumlah mahasiswa dalam antrian: " + queue.jumlahAntrian());
+                    break;
+                case 7:
+                    queue.clear();
+                    break;
+                case 0:
+                    System.out.println("Terima kasih.");
+                    break;
+                default:
+                    System.out.println("Pilihan tidak valid.");
+            }
         } while (pilihan != 0);
 
         dina11.close();
