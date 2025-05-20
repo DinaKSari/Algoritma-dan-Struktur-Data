@@ -76,8 +76,12 @@ public class DoubleLinkedLists11 {
         if(!isEmpty()){
             Node11 tmp = head;
             while(tmp != null){
-                
+                System.out.print(tmp.data + "\t");
+                tmp = tmp.next;
             }
+            System.out.println("\nberhasil diisi");
+        } else{
+            System.out.println("\nlinked lists kosong");
         }
     }
     
