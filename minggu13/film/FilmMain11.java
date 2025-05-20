@@ -79,7 +79,7 @@ public class FilmMain11 {
                     break;
                 case 10:
                     System.out.println("Terima kasih.");
-                    break;
+                    System.exit(0);
                 default:
                     System.out.println("Pilihan tidak valid.");
             }
