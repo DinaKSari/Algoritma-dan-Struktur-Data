@@ -221,7 +221,7 @@ public class BinaryTree11 {
         tampilMahasiswaIPKdiAtasHelper(root, ipkBatas);
     }
 
-    private void tampilMahasiswaIPKdiAtasHelper(Node11 node, double ipkBatas) {
+    public void tampilMahasiswaIPKdiAtasHelper(Node11 node, double ipkBatas) {
         if (node != null) {
             tampilMahasiswaIPKdiAtasHelper(node.left, ipkBatas);
             if (node.mahasiswa.ipk > ipkBatas) {
